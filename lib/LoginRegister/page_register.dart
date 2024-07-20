@@ -26,7 +26,7 @@ class _PageRegisterState extends State<PageRegister> {
   Future<int> _register() async {
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.1.4/utsDb/register.php'),
+        Uri.parse('http://192.168.1.3/utsDb/register.php'),
         body: {
           "username": txtUsername.text,
           "email": txtEmail.text,

@@ -118,7 +118,7 @@ class _PageUpdateProfilState extends State<PageUpdateProfil> {
       id = prefs.getString('id');
 
       final response = await http.post(
-        Uri.parse('http://192.168.1.4/utsDb/updateUser.php'),
+        Uri.parse('http://192.168.1.3/utsDb/updateUser.php'),
         body: {
           'id': id,
           'username': username,

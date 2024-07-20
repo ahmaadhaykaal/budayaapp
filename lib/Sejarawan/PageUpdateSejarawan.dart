@@ -118,7 +118,7 @@ class _updateSejarawanState extends State<updateSejarawan> {
 
       // Kirim data foto yang diunggah ke server
       final response = await http.post(
-          Uri.parse('http://192.168.1.4/utsDb/updateSejarawan.php'),
+          Uri.parse('http://192.168.1.3/utsDb/updateSejarawan.php'),
           body: {
             "id": id.text.toString(),
             "nama": nama.text.toString(),
@@ -144,7 +144,7 @@ class _updateSejarawanState extends State<updateSejarawan> {
     } else {
       // Jika gambar belum diunggah, kirim data tanpa perubahan foto
       final response = await http.post(
-          Uri.parse('http://192.168.1.4/utsDb/updateSejarawan.php'),
+          Uri.parse('http://192.168.1.3/utsDb/updateSejarawan.php'),
           body: {
             "id": id.text.toString(),
             "nama": nama.text.toString(),

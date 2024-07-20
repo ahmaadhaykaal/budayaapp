@@ -24,7 +24,7 @@ class _PageSearchSejarawanState extends State<PageSearchSejarawan> {
 
   Future<void> fetchSejarawan() async {
     final response = await http
-        .get(Uri.parse('http://192.168.1.4/utsDb/getSejarawan.php'));
+        .get(Uri.parse('http://192.168.1.3/utsDb/getSejarawan.php'));
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseData = json.decode(response.body);

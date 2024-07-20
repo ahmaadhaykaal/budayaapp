@@ -30,7 +30,7 @@ class _PageLoginState extends State<PageLogin> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.1.4/utsDb/login.php'),
+        Uri.parse('http://192.168.1.3/utsDb/login.php'),
         body: {
           "username": username,
           "password": password,

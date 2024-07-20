@@ -24,7 +24,7 @@ class _PageSearchBudayaState extends State<PageSearchBudaya> {
 
   Future<void> fetchBudaya() async {
     final response = await http
-        .get(Uri.parse('http://192.168.1.4/utsDb/getBudaya.php'));
+        .get(Uri.parse('http://192.168.1.3/utsDb/getBudaya.php'));
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseData = json.decode(response.body);

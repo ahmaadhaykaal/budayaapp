@@ -8,10 +8,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	$response = array();
 	$username = $_POST['username'];
+	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 	$fullname = $_POST['fullname'];
-	$email = $_POST['email'];
-	$bp = $_POST['bp'];
 
 	$cek = "SELECT * FROM users WHERE username = '$username' || email = '$email'";
 	$result = mysqli_fetch_array(mysqli_query($koneksi, $cek));
@@ -21,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 		$response['message'] = "Username atau email telah digunakan";
 		echo json_encode($response);
 	} else {
-		$insert = "INSERT INTO users VALUE(NULL, '$username', '$email', '$password', '$fullname', '$bp', NOW())";
+		$insert = "INSERT INTO users VALUE(NULL, '$username', '$email', '$password', '$fullname', NOW())";
 		if(mysqli_query($koneksi, $insert)){
 			$response['value'] = 1;
 			$response['message'] = "Berhasil didaftarkan";

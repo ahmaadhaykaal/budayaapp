@@ -19,7 +19,7 @@ class _PageListSejarawanState extends State<PageListSejarawan> {
   Future<List<Datum>?> getSejarawan() async {
     try {
       http.Response res = await http
-          .get(Uri.parse('http://192.168.1.4/utsDb/getSejarawan.php'));
+          .get(Uri.parse('http://192.168.1.3/utsDb/getSejarawan.php'));
       return sejarawanModelFromJson(res.body).data;
     } catch (e) {
       setState(() {
@@ -32,7 +32,7 @@ class _PageListSejarawanState extends State<PageListSejarawan> {
   Future _delete(String id) async {
     try {
       final response = await http.post(
-          Uri.parse('http://192.168.1.4/utsDb/deleteSejarawan.php'),
+          Uri.parse('http://192.168.1.3/utsDb/deleteSejarawan.php'),
           body: {
             "id": id,
           });
@@ -121,7 +121,7 @@ class _PageListSejarawanState extends State<PageListSejarawan> {
                                           borderRadius:
                                               BorderRadius.circular(10),
                                           child: Image.network(
-                                            'http://192.168.1.4/utsDb/gambar_sejarawan/${data?.foto}',
+                                            'http://192.168.1.3/utsDb/gambar_sejarawan/${data?.foto}',
                                             // fit: BoxFit.fill,
                                             height: 250,
                                             width: double.infinity,

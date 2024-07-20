@@ -78,7 +78,7 @@ class _PageUtamaState extends State<PageUtama> {
   Future<List<Datum>?> getBudaya() async {
     try {
       http.Response res = await http
-          .get(Uri.parse('http://192.168.1.4/utsDb/getBudaya.php'));
+          .get(Uri.parse('http://192.168.1.3/utsDb/getBudaya.php'));
       return modelBudayaFromJson(res.body).data;
     } catch (e) {
       setState(() {
@@ -193,7 +193,7 @@ class _PageUtamaState extends State<PageUtama> {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
                                         child: Image.network(
-                                          'http://192.168.1.4/utsDb/gambar_budaya/${data?.gambar}',
+                                          'http://192.168.1.3/utsDb/gambar_budaya/${data?.gambar}',
                                           fit: BoxFit.fill,
                                         ),
                                       ),

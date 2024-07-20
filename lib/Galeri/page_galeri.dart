@@ -38,7 +38,7 @@ class _GaleriPageState extends State<GaleriPage> {
   Future<List<Datum>?> getGaleri() async {
     // Endpoint API galeri
     String apiUrl =
-        'http://192.168.1.4/utsDb/getGallery.php?data=galeri'; // Ganti dengan URL API yang sesuai
+        'http://192.168.1.3/utsDb/getGallery.php?data=galeri'; // Ganti dengan URL API yang sesuai
 
     try {
       // Melakukan request HTTP GET ke API
@@ -106,12 +106,12 @@ class _GaleriPageState extends State<GaleriPage> {
                           MaterialPageRoute(
                             builder: (context) => ZoomableImage(
                                 imageUrl:
-                                    'http://192.168.1.4/utsDb/photo/${galeri[index].foto}'),
+                                    'http://192.168.1.3/utsDb/photo/${galeri[index].foto}'),
                           ),
                         );
                       },
                       child: Image.network(
-                        'http://192.168.1.4/utsDb/photo/${galeri[index].foto}',
+                        'http://192.168.1.3/utsDb/photo/${galeri[index].foto}',
                         fit: BoxFit.cover,
                       ));
                 },

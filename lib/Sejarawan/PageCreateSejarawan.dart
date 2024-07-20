@@ -68,7 +68,7 @@ class _createSejarawanState extends State<createSejarawan> {
         DateFormat('yyyy-MM-dd').format(DateTime.parse(tgl_lahir.text));
 
     final response = await http.post(
-        Uri.parse('http://192.168.1.4/utsDb/createSejarawan.php'),
+        Uri.parse('http://192.168.1.3/utsDb/createSejarawan.php'),
         body: {
           "nama": nama.text,
           "tgl_lahir": formattedDate,
